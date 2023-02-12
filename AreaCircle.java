@@ -1,7 +1,7 @@
 import java.util.Scanner;
 
 /**
-* The Program calculates the volume of a sphere in Java.
+* The Program calculates the area of a circle in Java.
 *
 * @author  Melody Berhane
 * @version 1.0
