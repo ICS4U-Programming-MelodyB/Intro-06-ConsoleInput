@@ -1,13 +1,13 @@
 import java.util.Scanner;
 
 /**
-* The Program calculates the area of a circle in Java.
+* The Program calculates the volume of a sphere in Java.
 *
 * @author  Melody Berhane
 * @version 1.0
 * @since   2023-2-10
 */
-public final class AreaCircle {
+public final class ConsoleInput {
 
     /**
      * This is a private constructor used to satisfy the
@@ -16,7 +16,7 @@ public final class AreaCircle {
      * @exception IllegalStateException Utility class.
      * @see IllegalStateException
      */
-    private AreaCircle() {
+    private ConsoleInput() {
         throw new IllegalStateException("Utility class");
     }
 
@@ -27,8 +27,8 @@ public final class AreaCircle {
      */
     public static void main(String[] args) {
         // Welcome the user
-        System.out.println("Welcome to Melody's Area of a Circle Program!");
-        System.out.print("Enter the radius of the circle (cm): ");
+        System.out.println("Welcome to Melody's volume of a Sphere Program!");
+        System.out.print("Enter the radius of the sphere (cm): ");
 
         // Using Scanner for Getting Input for User
         final Scanner scanner = new Scanner(System.in);
@@ -41,13 +41,14 @@ public final class AreaCircle {
         if (radDouble < 0) {
             System.out.println("The radius cannot be negative.");
         } else {
-            // Calculate the area
-            final double area = Math.PI * Math.pow(radDouble, 2);
+            // Calculate the volume
+            final double volume = Math.PI * Math.pow(radDouble, 3);
+            final double finalVolume = volume * (4f / 3f);
 
-            // Display the area, round to 2 decimal places
+            // Display the volume, round to 2 decimal places
             System.out.print("The area of a circle with radius, ");
             System.out.print(radString + "cm, is ");
-            System.out.format("%.2f", area);
+            System.out.format("%.2f", finalVolume);
             System.out.println("cm^2.");
         }
 
